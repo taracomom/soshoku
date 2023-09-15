@@ -1,0 +1,112 @@
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* 既存のスタイルを維持 */
+body {
+    font-family: 'Noto Sans JP', sans-serif; /* ここで新しいフォントを指定します */
+    padding: 20px;
+    padding: 20px;
+}
+
+#exampleText {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+
+#samplesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* サンプルの間のスペース */
+}
+
+.sampleCard {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 1px 15px; /* 上下10px、左右15pxのpaddingを設定 */
+    border-radius: 8px; /* 角を少し丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
+    width: auto;
+    align-items: center; /* 垂直方向の中央寄せ */
+    text-align: center; /* テキストを中央揃え */
+    cursor: pointer; /* マウスカーソルをハンドに変更 */
+    transition: transform 0.1s, box-shadow 0.1s; /* クリック時のアニメーション */
+    margin: 0 10px; /* 両側のマージンを設定してカード間にスペースを作成 */
+}
+
+.sampleCard:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ホバー時の影 */
+}
+
+.sampleCard:active {
+    transform: scale(0.97); /* クリック時の縮小 */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+textarea {
+    width: 100%; /* テキストエリアの幅を100%に設定して、親要素の幅に合わせる */
+    height: 120px;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    margin-top: 20px;
+    resize: vertical;
+    box-sizing: border-box; /* パディングとボーダーを含めて要素のサイズを計算 */
+}
+
+.textareas-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;  /* 追加: 垂直方向の中央寄せ */
+}
+
+.input-area, .output-area {
+    flex: 1; /* 各エリアを均等に分割 */
+    padding: 0 10px; /* 両側のパディングでテキストボックス間のスペースを確保 */
+}
+
+.output-area {
+    text-align: center; /* テキストアラインメントを中央寄せに変更 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* アイテムを中央寄せに変更 */
+    gap: 5px; /* ボタンとテキストボックスの間隔を調整 */
+}
+
+.input-area {
+    text-align: center; /* テキストアラインメントを中央寄せに変更 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* アイテムを中央寄せに変更 */
+    gap: 25px; /* ボタンとテキストボックスの間隔を調整 */
+}
+
+
+.output-container {
+    display: flex;
+    flex-direction: column; /* 縦方向に要素を配置 */
+    gap: 0px; /* コピーボタンとテキストボックスの間隔を開ける */
+}
+
+button {
+    margin-top: 20px;
+}
+.dummy-button {
+    visibility: hidden; /* ボタンは非表示になりますが、そのスペースは保持されます */
+    margin-top: 20px;
+
+}
+

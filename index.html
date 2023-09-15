@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Decorator</title>
+    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Xテキスト装飾ジェネレーター</h2>
+
+	<div class="textareas-container">
+    <div class="input-area">
+    <button class="dummy-button"></button> <!-- ダミーのボタンを追加 -->
+    <textarea id="userText" placeholder="テキストを入力してね" rows="5" cols="48"></textarea>
+    </div>
+    <div class="output-area">
+        <button onclick="copyToClipboard()">▼コピー▼</button>
+        <textarea id="resultText" placeholder="ここに表示されるよ" rows="5" cols="48"></textarea>
+    </div>
+</div>
+
+
+
+<br>▼好きな装飾スタイルを選んでね▼
+
+        <div id="samplesContainer">
+  <div class="sampleCard" onclick="generateDecoratedText('style1')">
+        <p>◤Style1◢</p>
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style2')">
+        <p>◤◢◤Style2◢◤◢</p>
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style3')">
+        <p>◤◢◤◢◤◢◤◢<br>Style3<br>◤◢◤◢◤◢◤◢</p>
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style4')">
+        <p>◤￣￣￣￣￣￣◥<br> Style4 <br>◣＿＿＿＿＿＿◢</p>
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style5')">
+        <p>┏━━━━┓<br>Style5<br>┗━━━━┛</p>
+
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style6')">
+        <p>◇━━━━◇<br>Style6<br>◇━━━━◇</p>
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style7')">
+        <p>╋━━━━╋<br>Style7<br>╋━━━━╋</p>
+    </div>
+        <div class="sampleCard" onclick="generateDecoratedText('style8')">
+        <p>■━━━━■<br>Style8<br>■━━━━■</p>
+    </div>
+        </div>
+
+        <span id="exampleText"></span>
+
+        <span id="copyConfirmation" style="color: green;"></span>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
