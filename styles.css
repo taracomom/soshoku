@@ -40,6 +40,7 @@ body {
     gap: 20px; /* サンプルの間のスペース */
     width: 100%;
     overflow: hidden;
+    align-items: center; 
 
 }
 
@@ -47,18 +48,24 @@ body {
 
 .sampleCard {
     display: flex;
+    flex-direction: column;  /* カード内のコンテンツを縦方向に並べる */
     border: 1px solid #ccc;
-    padding: 1px 15px; /* 上下10px、左右15pxのpaddingを設定 */
-    border-radius: 8px; /* 角を少し丸くする */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
-    width: 100%; 
+    padding: 1px 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 120px;  /* カードの幅を設定 */
+    height: 150px;  /* カードの高さを設定 */
     float: left;  
-    align-items: center; /* 垂直方向の中央寄せ */
-    text-align: center; /* テキストを中央揃え */
-    cursor: pointer; /* マウスカーソルをハンドに変更 */
-    transition: transform 0.1s, box-shadow 0.1s; /* クリック時のアニメーション */
-    margin: 0 10px; /* 両側のマージンを設定してカード間にスペースを作成 */
+    align-items: center; 
+    text-align: center; 
+    cursor: pointer; 
+    transition: transform 0.1s, box-shadow 0.1s; 
+    margin: 0 10px; 
+    font-size: 14px;  /* フォントサイズを調整 */
+    margin-top: 20px;    /* 上部の余白を20px増やす */
+    margin-bottom: 20px; /* 下部の余白を20px増やす */
 }
+
 
 .sampleCard:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ホバー時の影 */
