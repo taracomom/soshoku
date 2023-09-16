@@ -16,6 +16,21 @@ body {
     font-style: italic;
     margin-left: 10px;
 }
+.author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-text-link, .author-icon-link {
+    text-decoration: none;  /* リンクの下線を削除 */
+    color: inherit;  /* リンクの色を親要素の色と同じにする */
+    margin-right: 10px;  /* リンク要素間のスペースを追加 */
+}
+
+.author-icon {
+    width: 32px;
+    height: 32px;
+}
 
 
 #samplesContainer {
@@ -23,7 +38,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px; /* サンプルの間のスペース */
+    width: 100%;
+    overflow: hidden;
+
 }
+
+
 
 .sampleCard {
     display: flex;
@@ -31,7 +51,8 @@ body {
     padding: 1px 15px; /* 上下10px、左右15pxのpaddingを設定 */
     border-radius: 8px; /* 角を少し丸くする */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
-    width: auto;
+    width: 100%; 
+    float: left;  
     align-items: center; /* 垂直方向の中央寄せ */
     text-align: center; /* テキストを中央揃え */
     cursor: pointer; /* マウスカーソルをハンドに変更 */

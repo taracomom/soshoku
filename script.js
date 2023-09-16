@@ -28,8 +28,8 @@ function generateDecoratedText(style) {
             resultText = `◤◢◤${userText}◢◤◢`;
             break;
         case 'style4':
-            let topBorder4 = '◤' + '￣'.repeat(longestLineLength + 0) + '◥';
-            let bottomBorder4 = '◣' + '＿'.repeat(longestLineLength + 0) + '◢';
+            let topBorder4 = '◤' + '￣'.repeat(longestLineLength *0.9 ) + '◥';
+            let bottomBorder4 = '◣' + '＿'.repeat(longestLineLength *0.9) + '◢';
             resultText = `${topBorder4}\n ${userText} \n${bottomBorder4}`;
             break;
         case 'style5':
@@ -45,6 +45,14 @@ function generateDecoratedText(style) {
             break;
         case 'style8':
             resultText = adjustBorderStyle('■', '━', '■', longestLineLength);
+            break;
+        case 'style9':
+            if (longestLineLength <= 5) {
+                resultText = `▼△▼△▼\n${userText}\n▼△▼△▼`;
+            } else {
+                let middle = '▼△'.repeat(Math.ceil(longestLineLength / 2));
+                resultText = `${middle}\n${userText}\n${middle}`;
+            }
             break;
         default:
             resultText = userText;
@@ -67,3 +75,16 @@ function copyToClipboard() {
         confirmation.textContent = '';
     }, 3000);
 }
+$(document).ready(function(){
+    $('#samplesContainer').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,  // 一度に表示するスライドの数を変更
+        slidesToScroll: 1,
+        arrows: true,  // 矢印
+        prevArrow: "<button type='button' class='slick-prev'>Prev</button>",
+        nextArrow: "<button type='button' class='slick-next'>Next</button>"
+    });
+    
+});

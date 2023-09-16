@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Border Decorator</title>
+    <title>Xテキスト装飾ジェネレーター</title>
     <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn.discordapp.com/attachments/1075458254857064479/1152611227365806130/chibi.ico">
+
+<!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+<!-- jQuery (Slickの依存) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JavaScript -->
+<script src="slick/slick.min.js"></script>
+
 
 </head>
 
@@ -16,52 +28,65 @@
 
 	<div class="textareas-container">
     <div class="input-area">
-    <button class="dummy-button"></button> <!-- ダミーのボタンを追加 -->
+<!--    <button class="dummy-button"></button>  ダミーのボタンを追加 -->
     <textarea id="userText" placeholder="テキストを入力してね" rows="5" cols="48"></textarea>
     </div>
     <div class="output-area">
-        <button onclick="copyToClipboard()">▼コピー▼</button>
+<!--        <button onclick="copyToClipboard()">▼コピー▼</button>-->
         <textarea id="resultText" placeholder="ここに表示されるよ" rows="5" cols="48"></textarea>
     </div>
 </div>
 
-
+</br>
+<span id="copyConfirmation" style="color: green;"></span>
 
 <br>▼好きな装飾スタイルを選んでね▼
 
         <div id="samplesContainer">
-  <div class="sampleCard" onclick="generateDecoratedText('style1')">
+  <div class="sampleCard" onclick="generateDecoratedText('style1'); copyToClipboard();">
         <p>◤Style1◢</p>
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style2')">
+        <div class="sampleCard" onclick="generateDecoratedText('style2'); copyToClipboard();">
         <p>◤◢◤Style2◢◤◢</p>
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style3')">
+        <div class="sampleCard" onclick="generateDecoratedText('style3'); copyToClipboard();">
         <p>◤◢◤◢◤◢◤◢<br>Style3<br>◤◢◤◢◤◢◤◢</p>
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style4')">
+        <div class="sampleCard" onclick="generateDecoratedText('style4'); copyToClipboard();">
         <p>◤￣￣￣￣￣￣◥<br> Style4 <br>◣＿＿＿＿＿＿◢</p>
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style5')">
+        <div class="sampleCard" onclick="generateDecoratedText('style5'); copyToClipboard();">
         <p>┏━━━━┓<br>Style5<br>┗━━━━┛</p>
 
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style6')">
+        <div class="sampleCard" onclick="generateDecoratedText('style6'); copyToClipboard();">
         <p>◇━━━━◇<br>Style6<br>◇━━━━◇</p>
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style7')">
+        <div class="sampleCard" onclick="generateDecoratedText('style7'); copyToClipboard();">
         <p>╋━━━━╋<br>Style7<br>╋━━━━╋</p>
     </div>
-        <div class="sampleCard" onclick="generateDecoratedText('style8')">
+        <div class="sampleCard" onclick="generateDecoratedText('style8'); copyToClipboard();">
         <p>■━━━━■<br>Style8<br>■━━━━■</p>
     </div>
+    <div class="sampleCard" onclick="generateDecoratedText('style9'); copyToClipboard();">
+    <p>▼△▼△▼△▼<br>Style9<br>▼△▼△▼△▼</p>
+    </div>    
         </div>
 
         <span id="exampleText"></span>
 
-        <span id="copyConfirmation" style="color: green;"></span>
-
     <script src="script.js"></script>
+
+<br>
+    <div class="author-info">
+        <a href="https://twitter.com/chibinftcom" class="author-text-link">
+            <span class="author-text">作成者：チビ画伯ママ</span>
+        </a>
+        <a href="https://twitter.com/chibinftcom" class="author-icon-link">
+            <img class="author-icon" src="https://cdn.discordapp.com/attachments/1075458254857064479/1152611227365806130/chibi.ico" alt="作成者のアイコン">
+        </a>
+    </div>
+    
 </body>
 
 </html>
