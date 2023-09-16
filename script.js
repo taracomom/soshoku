@@ -80,11 +80,19 @@ $(document).ready(function(){
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 3,  // 一度に表示するスライドの数を変更
+        slidesToShow: 3,  // PCビューで3枚のスライドを表示
         slidesToScroll: 1,
         arrows: true,  // 矢印
         prevArrow: "<button type='button' class='slick-prev'>Prev</button>",
-        nextArrow: "<button type='button' class='slick-next'>Next</button>"
+        nextArrow: "<button type='button' class='slick-next'>Next</button>",
+        responsive: [
+            {
+                breakpoint: 768, // 768px以下の画面サイズで
+                settings: {
+                    slidesToShow: 1 // スマホビューで1枚のスライドのみ表示
+                }
+            }
+        ]
     });
-    
 });
+
