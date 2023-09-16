@@ -1,14 +1,16 @@
 .container {
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     margin: 50px auto;
     text-align: center;
 }
 
-h2 {
-    margin-top: 10px; 
-    font-size: 30px;  /* この行を追加または変更 */
+.h2-image {
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
+
 
 /* 既存のスタイルを維持 */
 body {
@@ -24,7 +26,7 @@ body {
 
 
   .author-icon {
-    width: 80%;  /* 画像の幅を50pxに指定 */
+    width: 100%;  /* 画像の幅を50pxに指定 */
 
 }
 
@@ -98,10 +100,12 @@ textarea {
     justify-content: center;
     gap: 10px;
     align-items: center;
+    width: 100%; 
 }
 
 .input-area, .output-area {
     flex: 1; /* 各エリアを均等に分割 */
+    width: 100%; 
     padding: 0 10px; /* 両側のパディングでテキストボックス間のスペースを確保 */
 }
 
