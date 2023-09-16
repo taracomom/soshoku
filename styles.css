@@ -5,32 +5,29 @@
     text-align: center;
 }
 
+h2 {
+    margin-top: 10px; 
+    font-size: 30px;  /* この行を追加または変更 */
+}
+
 /* 既存のスタイルを維持 */
 body {
     font-family: 'Noto Sans JP', sans-serif; /* ここで新しいフォントを指定します */
-    padding: 20px;
-    padding: 20px;
+    font-size: 20px; /* この行を追加。デフォルトのフォントサイズを18pxに設定 */
 }
+
 
 #exampleText {
     font-style: italic;
     margin-left: 10px;
 }
-.author-info {
-    display: flex;
-    align-items: center;
+
+
+  .author-icon {
+    width: 60%;  /* 画像の幅を50pxに指定 */
+
 }
 
-.author-text-link, .author-icon-link {
-    text-decoration: none;  /* リンクの下線を削除 */
-    color: inherit;  /* リンクの色を親要素の色と同じにする */
-    margin-right: 10px;  /* リンク要素間のスペースを追加 */
-}
-
-.author-icon {
-    width: 32px;
-    height: 32px;
-}
 
 
 #samplesContainer {
@@ -61,7 +58,7 @@ body {
     cursor: pointer; 
     transition: transform 0.1s, box-shadow 0.1s; 
     margin: 0 10px; 
-    font-size: 14px;  /* フォントサイズを調整 */
+    font-size: 16px;  /* フォントサイズを調整 */
     margin-top: 20px;    /* 上部の余白を20px増やす */
     margin-bottom: 20px; /* 下部の余白を20px増やす */
 }
@@ -89,16 +86,18 @@ textarea {
     height: 120px;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     padding: 10px;
-    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 10px;
     resize: vertical;
     box-sizing: border-box; /* パディングとボーダーを含めて要素のサイズを計算 */
 }
 
 .textareas-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;  /* 追加: 垂直方向の中央寄せ */
+    flex-direction: column; /* この行を追加 */
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
 }
 
 .input-area, .output-area {
