@@ -16,6 +16,7 @@
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 /* Arrows */
+
 .slick-prev,
 .slick-next
 {
@@ -32,7 +33,7 @@
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
 
     cursor: pointer;
 
@@ -41,6 +42,7 @@
     outline: none;
     background: transparent;
 }
+
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
@@ -67,11 +69,11 @@
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 40px;
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: pink;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -79,11 +81,13 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 50px;
+    z-index: 1000;
+    transform: translateX(-100%) translateY(-50%);
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: 50px;
     left: auto;
 }
 .slick-prev:before
@@ -97,7 +101,8 @@
 
 .slick-next
 {
-    right: -25px;
+    right: 50px;
+    z-index: 1000;
 }
 [dir='rtl'] .slick-next
 {
@@ -182,8 +187,9 @@
     line-height: 20px;
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     width: 20px;
     height: 20px;
@@ -202,3 +208,4 @@
     opacity: .75;
     color: black;
 }
+
