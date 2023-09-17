@@ -54,6 +54,15 @@ function generateDecoratedText(style) {
                 resultText = `${middle}\n${userText}\n${middle}`;
             }
             break;
+            case 'style10':
+                const top10 = `＿${"人".repeat(userText.length + 1)}＿`;
+                const middle10 = `＞　${userText}　＜`;
+                const bottom10 = `￣Y^${"Y^".repeat(userText.length - 1)}￣`;
+                resultText = [top10, middle10, bottom10].join("\n");
+                break;         
+            
+            
+
         default:
             resultText = userText;
     }

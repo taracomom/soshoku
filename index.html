@@ -2,18 +2,6 @@
 <html lang="jp">
 
 <head>
-
-	
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXB7WLZL6T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CXB7WLZL6T');
-</script>
-	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xテキスト装飾ジェネレーター</title>
@@ -38,17 +26,7 @@
 <body>
     <div class="container">
         <h2><img src="text-decoration-generator.png" alt="Xテキスト装飾ジェネレーター" class="h2-image"></h2>
-<!-- 
-	<div class="textareas-container">
-    <div class="input-area">
 
-    <textarea id="userText" placeholder="テキストを入力してね" rows="5" cols="48"></textarea>
-    </div>
-    <div class="output-area">
-
-        <textarea id="resultText" placeholder="ここに表示されるよ" rows="5" cols="48"></textarea>
-    </div>
--->
 
 <div class="textareas-container">
     <div class="input-area">
@@ -96,6 +74,9 @@
     <div class="sampleCard" onclick="generateDecoratedText('style9'); copyToClipboard();">
     <p>▼△▼△▼△▼<br>Style9<br>▼△▼△▼△▼</p>
     </div>    
+    <div class="sampleCard" onclick="generateDecoratedText('style10'); copyToClipboard();">
+        <p>＿人人人人人＿<br>＞　Style10　＜<br>￣Y^Y^Y^Y^Y￣</p>
+    </div>   
         </div>
 
         <span id="exampleText"></span>
