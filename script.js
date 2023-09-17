@@ -55,11 +55,15 @@ function generateDecoratedText(style) {
             }
             break;
             case 'style10':
-                const top10 = `＿${"人".repeat(userText.length + 1)}＿`;
-                const middle10 = `＞　${userText}　＜`;
-                const bottom10 = `￣Y^${"Y^".repeat(userText.length - 2)}￣`;
+                const lines = userText.split(/\r\n|\r|\n/);
+                const maxLength = Math.max(...lines.map(line => line.length));
+                const top10 = `＿${"人".repeat(maxLength + 2)}＿`;
+                const middleLines = lines.map(line => `＞ ${line} ＜`.padEnd(maxLength, ' '));
+                const middle10 = middleLines.join('\n');
+                const bottom10 = `￣Y^${"Y^".repeat(maxLength )}￣`;
                 resultText = [top10, middle10, bottom10].join("\n");
-                break;         
+                break;
+                   
             
             
 
