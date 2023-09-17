@@ -57,7 +57,7 @@ function generateDecoratedText(style) {
             case 'style10':
                 const top10 = `＿${"人".repeat(userText.length + 1)}＿`;
                 const middle10 = `＞　${userText}　＜`;
-                const bottom10 = `￣Y^${"Y^".repeat(userText.length - 1)}￣`;
+                const bottom10 = `￣Y^${"Y^".repeat(userText.length - 2)}￣`;
                 resultText = [top10, middle10, bottom10].join("\n");
                 break;         
             
